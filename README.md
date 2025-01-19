@@ -11,14 +11,17 @@
 Reads the uploaded image.
 Converts it to RGB and processes it using Mediapipe Pose Estimation.
 Returns a processed image with pose landmarks to the frontend.
+
 <b>✍ Video Mode:
 Processes each video frame using Mediapipe Pose.
 Generates a processed video by overlaying pose landmarks frame-by-frame.
 Outputs the final video for seamless playback.
+
 <b>✍ Webcam Mode:
 Captures live frames from the webcam.
 Applies Mediapipe Pose in real time.
 Displays dynamic results on the frontend.
+
 <b>MediaPipe uses TensorFlow Lite in the backend to perform pose estimation efficiently. The process begins with a person detection module, which identifies the region of interest (ROI) in the frame containing the human body. This cropped ROI is then passed to the pose estimator, which predicts the keypoints or landmarks within the human body. MediaPipe Pose Estimation detects a total of 33 keypoints on the body, including key regions such as the head, shoulders, elbows, wrists, hips, knees, and ankles.
 
 <b>Key Features of MediaPipe Pose Estimation:
