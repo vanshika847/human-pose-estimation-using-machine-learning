@@ -6,6 +6,19 @@
 ![image](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*JUXSz1Vy5S7OiIz26DPgew.png)
 
 # So how does it work?
+<b> Backend Workflow
+✍ Image Mode:
+Reads the uploaded image.
+Converts it to RGB and processes it using Mediapipe Pose Estimation.
+Returns a processed image with pose landmarks to the frontend.
+<b>✍ Video Mode:
+Processes each video frame using Mediapipe Pose.
+Generates a processed video by overlaying pose landmarks frame-by-frame.
+Outputs the final video for seamless playback.
+<b>✍ Webcam Mode:
+Captures live frames from the webcam.
+Applies Mediapipe Pose in real time.
+Displays dynamic results on the frontend.
 <b>MediaPipe uses TensorFlow Lite in the backend to perform pose estimation efficiently. The process begins with a person detection module, which identifies the region of interest (ROI) in the frame containing the human body. This cropped ROI is then passed to the pose estimator, which predicts the keypoints or landmarks within the human body. MediaPipe Pose Estimation detects a total of 33 keypoints on the body, including key regions such as the head, shoulders, elbows, wrists, hips, knees, and ankles.
 
 <b>Key Features of MediaPipe Pose Estimation:
@@ -17,8 +30,11 @@ This depth information allows for a more accurate understanding of body posture,
 
 2. Real-time Performance: MediaPipe Pose uses BlazePose, a cutting-edge research model, to achieve high-fidelity pose tracking. This solution is optimized for real-time inference, allowing it to run efficiently on a wide range of devices including mobile phones, desktops, and laptops.
 
-3. Applications: The ability to detect keypoints in real-time is valuable across various use cases such as yoga, dance, fitness applications, and AR. These applications can utilize the pose landmarks for:
-
+3. Potential Applications: The ability to detect keypoints in real-time is valuable across various use cases such as yoga, dance, fitness applications, and AR.
+Fitness and sports motion analysis.
+Gesture recognition for interactive applications.
+Motion tracking in gaming or animation.
+Examples:
 a) Quantifying physical exercises: Ensuring correct form and tracking progress over time.
 b) Sign language recognition: Mapping hand gestures to text or speech.
 c) Augmented Reality (AR): Overlaying digital elements on the human body based on pose data.
@@ -47,16 +63,15 @@ These validation datasets help demonstrate the model's ability to detect keypoin
 ## Categories of human pose detection:
 
 
-1.2D Pose Estimation: In 2D pose estimation, only x and y coordinates are predicted for each landmark. This does not provide information about joint angles, rotations, or the orientation of the human body.
+1.2D Pose Estimation
 
-2. 3D Pose Estimation: With 3D pose estimation, the model predicts the x, y, and z coordinates for each landmark, allowing for a more detailed representation of the human body's pose. It also enables the calculation of joint angles, providing insight into the orientation and posture of the individual.
+2. 3D Pose Estimation
 
-3. Rigid Pose Estimation (6D Pose Estimation): This technique provides a complete 3D understanding of human pose, including rotation and orientation of the human body. It is often used for precise tracking in applications like robotics and AR.
+3. Rigid Pose Estimation (6D Pose Estimation)
 
-4. Single Pose Estimation: A model designed for predicting the pose of one person at a time in an image or video.
+4. Single Pose Estimation
    
-5. Multi-Pose Estimation: A more advanced model that can predict multiple human poses simultaneously in the same image or video, enabling the detection of groups of people.
-
+5. Multi-Pose Estimation
 # Human Pose detection with OpenCV Output:
 OpenCV Output for Human Pose Detection
 The output of a pose detection system, such as the one in OpenCV, typically includes:
