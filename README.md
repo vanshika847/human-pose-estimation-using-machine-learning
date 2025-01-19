@@ -7,6 +7,7 @@
 
 # So how does it work?
 <b> Backend Workflow
+
 ✍ Image Mode:
 Reads the uploaded image.
 Converts it to RGB and processes it using Mediapipe Pose Estimation.
