@@ -60,8 +60,6 @@ Dance: Capturing dynamic movements in dance.
 HIIT: Tracking physical exercise movements during high-intensity interval training.
 These validation datasets help demonstrate the model's ability to detect keypoints consistently, even for individuals positioned 2-4 meters from the camera.
 
-![image](https://user-images.githubusercontent.com/48796009/228968792-c3da1cd4-7b18-4d57-ab2c-482825deccd6.png)
-
 
 ## Categories of human pose detection:
 
